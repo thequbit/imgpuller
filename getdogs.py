@@ -17,6 +17,7 @@ def getanimals(url):
     items = soup.findAll('td', attrs={'class': 'list-item'})
     print "\tFound {0} animals.".format(len(items))
     animals = []
+    animals.append(("name","animalid","species","sex","bread","age","hidden","hasphto","photo"))
     for item in items:
         photo = item.find('div',attrs={'class': 'list-animal-photo-block'}).find('img')['src']
         info = item.find('div',attrs={'class': 'list-animal-info-block'})
@@ -36,14 +37,14 @@ def getanimals(url):
     return animals
 
 def saveanimals(animals):
-    #success = True
-    #try:
+    success = True
+    try:
         with open('dogs.csv','wb') as f:
             writer = csv.writer(f)
             writer.writerows(animals)
-    #except:
-    #    success = False
-    #return success
+    except:
+        success = False
+    return success
 
 def main(argv):
     if len(argv) != 2:

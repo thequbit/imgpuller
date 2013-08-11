@@ -14,12 +14,12 @@ of animals up for adoption.  This is the result.
 
     > python getdogs.py "<url>"
     
-    Where <url> will be something like:
+Where <url> will be something like:
     
     http://www.petango.com/webservices/adoptablesearch/wsAdoptableAnimals.aspx?species=Dog&sex=A&agegroup=All&shelter=NY343&onhold=A&orderby=ID&colnum=3&authkey=<authkey>
     
-    Note: you should put the url in quotes since there are ampersands within the URL and the linux prompt will not
-    interprete those they way you want it to .
+Note: you should put the url in quotes since there are ampersands within the URL and the linux prompt will not
+interprete those they way you want it to .
     
 
 ####Dependencies####
